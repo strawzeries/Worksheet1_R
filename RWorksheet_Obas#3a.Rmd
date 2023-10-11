@@ -1,0 +1,143 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+title: "RWorksheet_Obas#3a"
+output: pdf_document
+date: "2023-10-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r name, echo = TRUE}
+
+
+LETTERS
+#1.a
+Firts_11_Letters <- LETTERS [1:11]
+Firts_11_Letters
+
+#1.b 
+OddNumLetters <- LETTERS[c(TRUE, FALSE)]
+OddNumLetters
+
+#1.c
+Vowel_Letters <- LETTERS [c(1,5,9,15,21)]
+Vowel_Letters
+
+#1.d.
+lowercase_5 <- letters [22:26]
+lowercase_5
+
+#1.e
+lowercase15_24 <- letters [15:24]
+lowercase15_24
+
+#2.a 
+city <- c("Tuguegarao City", "Manila", "Iloilo City", "Tacloban", "Samal Island", "Davao City")
+city
+
+#2.b
+temperatures <- c(42, 39, 34, 34, 30, 27)
+temperatures
+
+#2.c
+CityTemp  <- data.frame(city,temperatures)
+CityTemp
+
+#2.d
+names(CityTemp) <- c("City", "Temperature")
+CityTemp
+
+#2.e 
+str(CityTemp)
+# showed the contents of the data frame
+# showed the summary of the data frame
+
+#2.f
+Row3_4 <- CityTemp[3:4,]
+Row3_4
+
+#2.g
+highest <- CityTemp[which.max(CityTemp$Temperature),]
+highest
+
+
+lowest <- CityTemp[which.min(CityTemp$Temperature),]
+lowest
+
+#USING MATRICES
+#2.a
+
+matr <- matrix(c(1:8,11:14), nrow = 3, ncol = 4)
+matr
+
+#2.b
+
+mulMatr <- matr * 2
+mulMatr
+
+#2.c
+
+rowTwooo <- mulMatr[2,]
+rowTwooo
+
+#2.d
+
+twoColsAndRows <- mulMatr[c(1,2),c(3,4)]
+twoColsAndRows
+
+#2.e 
+
+twoColsOneRow <- mulMatr[3,c(2,3)]
+twoColsOneRow
+
+#2.f
+
+fourCol <- mulMatr[,4]
+fourCol
+
+#2.g 
+dimnames(mulMatr) <- list(c("isa", "dalawa", "tatlo"), c("uno", "dos", "tres", "quatro"))
+
+mulMatr
+
+#2.h
+
+matr
+dim(matr) <- c(6,2)
+matr
+
+
+#ARRAYS
+
+#3.a 
+
+
+values <- c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1)
+rep_values <- rep(values, each = 2)
+
+arr <- array(rep_values, dim = c(2,4,3))
+arr
+
+#3.b 
+# three dimensions
+
+#3.c
+dimnames(arr) <- list(
+  letters[1:2], # row names
+  LETTERS[1:4], # col names
+  c("1st-Dimensional Array", "2nd-Dimensional Array", "3rd-Dimensional Array") # dim names
+)
+
+arr
+
+```
+
+
+
+
+
