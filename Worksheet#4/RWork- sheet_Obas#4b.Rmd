@@ -1,0 +1,36 @@
+---
+title: "RWork- sheet_Obas#4b.Rmd"
+author: "Barbie Joy Obas"
+date: "2023-11-08"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#1.
+Vector_A <- c(1,2,3,4,5)
+matrix_A <- matrix(0, nrow=5, ncol=5)
+
+for (b in 1:5)
+for(j in 1:5)
+{
+  matrix_A[b,j] <- abs (Vector_A[b]-Vector_A[j])
+}
+matrix_A
+
+
+
+
+#2.
+
+for (a in 1:5)
+{
+  cat(paste0("\"", rep ("*",a),"\""), "\n")
+}
+
+
+
