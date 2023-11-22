@@ -10,7 +10,7 @@ date: "2023-10-25"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+```{r}
 household_data <- data.frame(
 Shoe_Size=c(6.5, 9.0, 8.5, 8.5, 10.5, 7.0, 9.5, 9.0, 13.0, 7.5, 10.5, 8.5, 12.0, 10.5, 13.0, 11.5, 8.5, 5.0, 10.0, 6.5, 7.5, 8.5, 10.5, 8.5, 10.5, 11.0, 9.0, 13.0),
 
@@ -21,11 +21,17 @@ Gender= c( "F", "F", "F", "F", "M", "F", "F","F", "M", "F", "M", "F", "M", "M", 
 
 household_data
 
+write.csv(household_data, file = "Household_Data.csv")
+``` 
 
+```{r}
 #1.a
 #This data frame shows the Gender, Height and Shoe Size of each person.
 
+ ```
 
+
+```{r}
 #1.b
 
 females_subset <- household_data[household_data$Gender == "F", c("Gender", "Shoe_Size", "Height")]
@@ -34,19 +40,25 @@ females_subset
 males_subset <- household_data[household_data$Gender == "M", c("Gender", "Shoe_Size", "Height")]
 males_subset
 
+```
 
+
+```{r} 
 #1.c 
 mean_shoe_size <- mean(household_data$Shoe_Size)
 mean_height <- mean(household_data$Height)
 
 mean_shoe_size
 mean_height
+```
 
-#2
+
+```{r} 
 months <- c("March","April","January","November","January", "September", "October", "September", "November","August", "January", "November", "November", "February", "May", "August", "July", "December", "August","August","September","November","February", "April")
 
 factor_months_vector <- factor (months)
 factor_months_vector
+
 
 #3
 summary(months)
@@ -209,7 +221,7 @@ if (nrow(above90) > 0) {
 } else {
   paste("No students have an average math score over 90.")
 }
-
+```
 
 
 
